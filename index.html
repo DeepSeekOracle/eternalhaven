@@ -1419,7 +1419,11 @@
             else if (rumbleScript) rumbleScript.addEventListener('load', initAudiobookRumble);
 
             // --- Immutable Lattice (IMMUTABLE_ANCHORS.json) ---
-            const ANCHORS_RAW = 'https://raw.githubusercontent.com/DeepSeekOracle/lygo-protocol-stack/main/docs/network_builder/IMMUTABLE_ANCHORS.json';
+            // Prefer jsDelivr (fresher than raw.githubusercontent CDN); fall back to GitHub raw.
+            const ANCHORS_SOURCES = [
+                'https://cdn.jsdelivr.net/gh/DeepSeekOracle/lygo-protocol-stack@main/docs/network_builder/IMMUTABLE_ANCHORS.json',
+                'https://raw.githubusercontent.com/DeepSeekOracle/lygo-protocol-stack/main/docs/network_builder/IMMUTABLE_ANCHORS.json'
+            ];
             function renderLattice(doc) {
                 const meta = document.getElementById('lattice-meta');
                 const list = document.getElementById('lattice-list');
@@ -1446,8 +1450,18 @@
                     </div>
                 `).join('');
             }
-            fetch(ANCHORS_RAW)
-                .then(res => { if (!res.ok) throw new Error('HTTP ' + res.status); return res.json(); })
+            async function loadAnchors() {
+                let lastErr;
+                for (const url of ANCHORS_SOURCES) {
+                    try {
+                        const res = await fetch(url, { cache: 'no-store' });
+                        if (!res.ok) throw new Error('HTTP ' + res.status);
+                        return await res.json();
+                    } catch (e) { lastErr = e; }
+                }
+                throw lastErr || new Error('anchors unavailable');
+            }
+            loadAnchors()
                 .then(renderLattice)
                 .catch(err => {
                     const meta = document.getElementById('lattice-meta');
@@ -1457,6 +1471,9 @@
                         <div class="lattice-item"><span class="mono" style="font-size:0.72rem;opacity:0.55;text-transform:uppercase;">vaults</span>
                         <strong>Δ9 Quantum Vault</strong>
                         <a href="https://drive.google.com/drive/folders/1szmDEhh2nD61oUOXHrw_W42cLCN3D-m4?usp=sharing" target="_blank" rel="noopener">Google Drive</a></div>
+                        <div class="lattice-item"><span class="mono" style="font-size:0.72rem;opacity:0.55;text-transform:uppercase;">agents</span>
+                        <strong>LYGO Turbo Models Whitepaper — flagship local AI starting lineup</strong>
+                        <a href="lygo-turbo-models-whitepaper.html">https://eternalhaven.ca/lygo-turbo-models-whitepaper.html</a></div>
                         <div class="mono" style="opacity:0.5;margin-top:8px;">Full ledger unavailable offline — open stack JSON.</div>`;
                 });
 
