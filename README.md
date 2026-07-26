@@ -22,3 +22,8 @@ AdSense publisher: `ca-pub-0646320966060599`
 | CNAME | www | deepseekoracle.github.io |
 
 Repo: DeepSeekOracle/eternalhaven · Pages: main / (root) · Custom domain: eternalhaven.ca
+
+## LYGO ASCII Art Studio
+- https://eternalhaven.ca/lygo-ascii-art.html
+- Client-side photo to ASCII/text art. SEO + AdSense ready.
+
