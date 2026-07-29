@@ -712,6 +712,37 @@
             color: rgba(245, 245, 245, 0.65);
         }
         .rumble-live-caption a { text-decoration: underline; }
+        .rumble-cta-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            margin-top: 14px;
+        }
+        .rumble-cta-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 12px 18px;
+            border-radius: 10px;
+            font-weight: 700;
+            font-size: 0.92rem;
+            text-decoration: none !important;
+            border: 1px solid transparent;
+            transition: filter 0.15s, transform 0.15s, box-shadow 0.15s;
+        }
+        .rumble-cta-btn:hover { filter: brightness(1.08); transform: translateY(-1px); }
+        .rumble-cta-btn.primary {
+            background: linear-gradient(135deg, #85c742, #b8e986);
+            color: #0a1206 !important;
+            box-shadow: 0 6px 22px rgba(133, 199, 66, 0.35);
+        }
+        .rumble-cta-btn.secondary {
+            background: rgba(133, 199, 66, 0.12);
+            border-color: rgba(133, 199, 66, 0.45);
+            color: #c8f0a0 !important;
+        }
 
         .usb-path-grid {
             display: grid;
@@ -882,6 +913,18 @@
             <a id="rumbleLiveLink" href="https://rumble.com/Excavationpro/live?mref=1th29y&amp;mc=2p3fp" target="_blank" rel="noopener noreferrer">Open full LIVE on Rumble</a>
             · <a id="rumblePopoutLink" href="https://rumble.com/embed/v7b5p30/?pub=1th29y" target="_blank" rel="noopener noreferrer">Pop-out player</a>
         </p>
+        <div class="rumble-cta-row" role="group" aria-label="Rumble referral and live links">
+            <a class="rumble-cta-btn primary" href="https://rumble.com/register/Excavationpro/" target="_blank" rel="noopener noreferrer sponsored">
+                <i class="fas fa-user-plus" aria-hidden="true"></i> Join Rumble via Excavationpro
+            </a>
+            <a class="rumble-cta-btn secondary" id="rumbleLiveCta" href="https://rumble.com/Excavationpro/live?mref=1th29y&amp;mc=2p3fp" target="_blank" rel="noopener noreferrer">
+                <i class="fas fa-tower-broadcast" aria-hidden="true"></i> Watch LIVE
+            </a>
+        </div>
+        <p class="rumble-live-caption" style="margin-top:8px;font-size:0.78rem;">
+            Referral signup: <a href="https://rumble.com/register/Excavationpro/" target="_blank" rel="noopener noreferrer sponsored">rumble.com/register/Excavationpro</a>
+            — free Rumble account, supports the channel.
+        </p>
     </div>
     <script>
     (function () {
@@ -890,6 +933,7 @@
       var frame = document.getElementById('rumbleLiveFrame');
       var badge = document.getElementById('rumbleLiveBadge');
       var link = document.getElementById('rumbleLiveLink');
+      var liveCta = document.getElementById('rumbleLiveCta');
       var pop = document.getElementById('rumblePopoutLink');
       function apply(d) {
         var id = (d && d.embed_id) ? String(d.embed_id) : FALLBACK;
@@ -901,6 +945,7 @@
         if (frame && frame.getAttribute('src') !== embed) frame.setAttribute('src', embed);
         if (pop) pop.href = embed;
         if (link) link.href = watch;
+        if (liveCta) liveCta.href = watch;
         if (badge) {
           badge.style.opacity = live ? '1' : '0.55';
           badge.innerHTML = live
@@ -1060,6 +1105,7 @@
                         <a class="link-row" href="https://www.looperman.com/users/profile/5711248" target="_blank" rel="noopener"><i class="fas fa-loop"></i><span>Looperman</span></a>
                         <a class="link-row" href="https://deepseekoracle.github.io/Excavationpro/Musicplayer" target="_blank" rel="noopener"><i class="fas fa-play"></i><span>Music Player</span></a>
                         <a class="link-row" href="https://bpmfinder.ca/" target="_blank" rel="noopener noreferrer"><i class="fas fa-drum"></i><span>LYGO BPM Finder<span class="link-meta">client-side tempo — no upload</span></span></a>
+                        <a class="link-row" href="https://rumble.com/register/Excavationpro/" target="_blank" rel="noopener noreferrer sponsored"><i class="fas fa-user-plus"></i><span>Join Rumble (referral)<span class="link-meta">rumble.com/register/Excavationpro — free signup</span></span></a>
                         <a class="link-row" href="https://rumble.com/Excavationpro/live?mref=1th29y&amp;mc=2p3fp" target="_blank" rel="noopener"><i class="fas fa-tower-broadcast"></i><span>24/7 Live Radio (monetized)<span class="link-meta">LYGO &amp; Excavationpro originals — always LIVE</span></span></a>
                         <a class="link-row" href="https://rumble.com/user/Excavationpro" target="_blank" rel="noopener"><i class="fas fa-video"></i><span>Rumble channel</span></a>
                         <a class="link-row" href="https://linktr.ee/excavationpro" target="_blank" rel="noopener"><i class="fas fa-link"></i><span>Linktree</span></a>
