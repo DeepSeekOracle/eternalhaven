@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- eternalhaven hub deploy: live-iframe v7anxls (Rumble pub 1th29y) -->
+<!-- eternalhaven hub deploy: live-iframe v7b5p30 (Rumble pub 1th29y) always-live -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -863,24 +863,61 @@
     </div>
 
     <div class="rumble-live-hero" id="live-radio">
-        <div class="live-badge"><span class="pulse-dot" aria-hidden="true"></span> LIVE · 24/7 ORIGINAL MUSIC RADIO</div>
+        <div class="live-badge" id="rumbleLiveBadge"><span class="pulse-dot" aria-hidden="true"></span> LIVE · 24/7 ORIGINAL MUSIC RADIO</div>
         <h2 style="font-size: clamp(1.1rem, 2.5vw, 1.45rem); margin-bottom: 14px; color: var(--gold); border: none; display: block;">
             <i class="fas fa-tower-broadcast"></i> Excavationpro × LYGO — Coffee Room / Lurk Friendly
         </h2>
-        <div class="rumble-live-frame" title="Excavationpro 24/7 live radio">
+        <div class="rumble-live-frame" title="Excavationpro always-on Rumble live">
             <iframe
-                src="https://rumble.com/embed/v7anxls/?pub=1th29y"
+                id="rumbleLiveFrame"
+                src="https://rumble.com/embed/v7b5p30/?pub=1th29y"
+                allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
                 allowfullscreen
                 loading="eager"
                 referrerpolicy="strict-origin-when-cross-origin"
-                title="Excavationpro × LYGO — 24/7 original music radio (Rumble live)"></iframe>
+                title="Excavationpro × LYGO — always-on original music radio (Rumble live)"></iframe>
         </div>
-        <p class="rumble-live-caption">
-            Monetized stream — all Excavationpro &amp; LYGO originals.
-            <a href="https://rumble.com/v7cuiw2-content-you-can-digoriginal-music-radiocoffee-room-chat-lurk-friendly247-st.html?mref=1th29y&amp;mc=2p3fp" target="_blank" rel="noopener noreferrer">Open on Rumble</a>
-            · <a href="https://rumble.com/embed/v7anxls/?pub=1th29y" target="_blank" rel="noopener noreferrer">Pop-out player</a>
+        <p class="rumble-live-caption" id="rumbleLiveMeta">
+            Monetized always-live feed — all Excavationpro &amp; LYGO originals.
+            <a id="rumbleLiveLink" href="https://rumble.com/Excavationpro/live?mref=1th29y&amp;mc=2p3fp" target="_blank" rel="noopener noreferrer">Open full LIVE on Rumble</a>
+            · <a id="rumblePopoutLink" href="https://rumble.com/embed/v7b5p30/?pub=1th29y" target="_blank" rel="noopener noreferrer">Pop-out player</a>
         </p>
     </div>
+    <script>
+    (function () {
+      var PUB = '1th29y';
+      var FALLBACK = 'v7b5p30';
+      var frame = document.getElementById('rumbleLiveFrame');
+      var badge = document.getElementById('rumbleLiveBadge');
+      var link = document.getElementById('rumbleLiveLink');
+      var pop = document.getElementById('rumblePopoutLink');
+      function apply(d) {
+        var id = (d && d.embed_id) ? String(d.embed_id) : FALLBACK;
+        if (id.charAt(0) !== 'v') id = 'v' + id;
+        var live = !!(d && d.is_live);
+        var watch = (d && d.watch_url) ? String(d.watch_url)
+          : ('https://rumble.com/Excavationpro/live?mref=' + PUB + '&mc=2p3fp');
+        var embed = 'https://rumble.com/embed/' + encodeURIComponent(id) + '/?pub=' + encodeURIComponent(PUB);
+        if (frame && frame.getAttribute('src') !== embed) frame.setAttribute('src', embed);
+        if (pop) pop.href = embed;
+        if (link) link.href = watch;
+        if (badge) {
+          badge.style.opacity = live ? '1' : '0.55';
+          badge.innerHTML = live
+            ? '<span class="pulse-dot" aria-hidden="true"></span> LIVE · 24/7 ORIGINAL MUSIC RADIO'
+            : '<span class="pulse-dot" aria-hidden="true"></span> STANDBY · OPEN RUMBLE FOR SCHEDULE';
+        }
+      }
+      function load() {
+        fetch('data/rumble-live.json?t=' + Date.now(), { cache: 'no-store' })
+          .then(function (r) { return r.ok ? r.json() : null; })
+          .then(function (d) { apply(d || { embed_id: FALLBACK, is_live: true }); })
+          .catch(function () { apply({ embed_id: FALLBACK, is_live: true }); });
+      }
+      load();
+      setInterval(load, 180000);
+    })();
+    </script>
 
     <section class="main-hero" style="min-height:auto; padding: 2rem 0 2rem;">
         <div class="container hero-content">
@@ -1023,7 +1060,7 @@
                         <a class="link-row" href="https://www.looperman.com/users/profile/5711248" target="_blank" rel="noopener"><i class="fas fa-loop"></i><span>Looperman</span></a>
                         <a class="link-row" href="https://deepseekoracle.github.io/Excavationpro/Musicplayer" target="_blank" rel="noopener"><i class="fas fa-play"></i><span>Music Player</span></a>
                         <a class="link-row" href="https://bpmfinder.ca/" target="_blank" rel="noopener noreferrer"><i class="fas fa-drum"></i><span>LYGO BPM Finder<span class="link-meta">client-side tempo — no upload</span></span></a>
-                        <a class="link-row" href="https://rumble.com/v7cuiw2-content-you-can-digoriginal-music-radiocoffee-room-chat-lurk-friendly247-st.html?mref=1th29y&amp;mc=2p3fp" target="_blank" rel="noopener"><i class="fas fa-tower-broadcast"></i><span>24/7 Live Radio (monetized)<span class="link-meta">LYGO &amp; Excavationpro originals</span></span></a>
+                        <a class="link-row" href="https://rumble.com/Excavationpro/live?mref=1th29y&amp;mc=2p3fp" target="_blank" rel="noopener"><i class="fas fa-tower-broadcast"></i><span>24/7 Live Radio (monetized)<span class="link-meta">LYGO &amp; Excavationpro originals — always LIVE</span></span></a>
                         <a class="link-row" href="https://rumble.com/user/Excavationpro" target="_blank" rel="noopener"><i class="fas fa-video"></i><span>Rumble channel</span></a>
                         <a class="link-row" href="https://linktr.ee/excavationpro" target="_blank" rel="noopener"><i class="fas fa-link"></i><span>Linktree</span></a>
                         <a class="link-row" href="https://patreon.com/collection/1621340" target="_blank" rel="noopener"><i class="fab fa-patreon"></i><span>Patreon</span></a>
