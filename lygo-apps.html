@@ -15,7 +15,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@Excavationpro">
 <meta name="theme-color" content="#05070f">
-<style>body{margin:0;background:#060810;color:#e2e8f0;font-family:Georgia,serif;line-height:1.65}a{color:#67e8f9}.wrap{max-width:960px;margin:0 auto;padding:1.25rem}.card{background:rgba(15,23,42,.7);border:1px solid #1e293b;border-radius:14px;padding:1.25rem;margin:1rem 0}.lead{color:#94a3b8}.btn{display:inline-block;padding:.65rem 1rem;border-radius:8px;text-decoration:none;font-family:system-ui,sans-serif;font-weight:700;border:1px solid #334155;color:#e2e8f0;margin:.2rem}.btn.primary{background:#22d3ee;color:#041016;border-color:#22d3ee}.breadcrumb{font-size:.85rem;color:#64748b}</style>
+<link rel="stylesheet" href="/assets/site.css">
 <style>
 .dark-game{background:#03040a;color:#e8eef7;border-radius:16px;padding:1.25rem;border:1px solid #1e293b}
 .dark-game h2,.dark-game h3{color:#f8fafc;font-family:system-ui,sans-serif}
@@ -38,37 +38,46 @@
 .hud b{color:#fbbf24}
 </style>
 </head>
-<body style="background:#060810">
-<header style="padding:1rem 1.25rem;border-bottom:1px solid rgba(255,255,255,.08);display:flex;flex-wrap:wrap;gap:1rem;align-items:center;justify-content:space-between;background:rgba(6,8,16,.92);position:sticky;top:0;z-index:20">
-<a href="/" style="color:#fbbf24;font-weight:800;text-decoration:none;font-family:system-ui,sans-serif">eternalhaven.ca</a>
-<nav style="display:flex;flex-wrap:wrap;gap:.85rem;font-family:system-ui,sans-serif;font-size:.88rem">
-<a href="/lygo-hub.html" style="color:#94a3b8;text-decoration:none">LYGO Hub</a>
-<a href="/lygo-eternal-lattice.html" style="color:#94a3b8;text-decoration:none">Eternal Lattice</a>
-<a href="/lygo-apps.html" style="color:#67e8f9;text-decoration:none;font-weight:700">Lattice Swarm</a>
-<a href="/HavenStarChart.html" style="color:#94a3b8;text-decoration:none">Star Chart</a>
-<a href="/BiometricEntropyHarness.html" style="color:#94a3b8;text-decoration:none">Biometrics</a>
-<a href="https://chatagent.ca/" style="color:#67e8f9;text-decoration:none">chatagent.ca</a>
-</nav></header>
-<div class="wrap">
+<body>
+<header class="site"><div class="wrap nav">
+<a class="brand" href="/">Eternal Haven</a>
+<nav class="navlinks" aria-label="Primary">
+<a href="/">Home</a><a href="/guides/">Guides</a><a href="/champions.html">Champions</a>
+<a href="/app.html">Tools</a>
+<a href="/lygo-eternal-lattice.html">Eternal Lattice</a>
+<a href="/lygo-apps.html" aria-current="page">Lattice Swarm</a>
+<a href="/about.html">About</a>
+</nav></div></header>
+<div class="wrap prose">
 <p class="breadcrumb"><a href="/">Home</a> · Lattice Swarm</p>
 <article class="card">
 <p style="font-family:system-ui,sans-serif;font-size:.8rem;color:#64748b;letter-spacing:.12em;text-transform:uppercase;margin:0 0 .5rem">Δ9Φ963 · LYGOapps</p>
 <h1 style="margin-top:0">Lattice Swarm</h1>
 <p class="lead">Command node agents across a hexagonal resonance grid. Build, defend, and harmonize the lattice before entropy unravels it.</p>
 <p style="font-size:.9rem">Source: <a href="https://github.com/DeepSeekOracle/LYGOapps" target="_blank" rel="noopener">DeepSeekOracle/LYGOapps</a>
-· <a href="https://chatagent.ca/lygo-apps.html">chatagent.ca</a>
-· <a href="https://eternalhaven.ca/lygo-apps.html">eternalhaven.ca</a>
-· Companion: <a href="/lygo-eternal-lattice.html">Eternal Lattice</a></p>
+· Full game: <a href="/games/lattice-swarm/">/games/lattice-swarm/</a>
+· Mirror: <a href="https://eternalhaven.ca/games/lattice-swarm/">eternalhaven</a>
+· Backup: <a href="https://lygo.grok.me/" target="_blank" rel="noopener">grok.me</a>
+· Companion: <a href="/games/eternal-lattice/">Eternal Lattice</a></p>
 <div style="display:flex;flex-wrap:wrap;gap:.5rem;margin:1rem 0">
-  <a class="btn primary" href="#play">Play hex demo ↓</a>
-  <a class="btn" href="https://github.com/DeepSeekOracle/LYGOapps" target="_blank" rel="noopener">GitHub</a>
-  <a class="btn" href="https://deepseekoracle.github.io/lygo-protocol-stack/SovereignLatticeMesh.html">Sovereign Lattice Mesh</a>
+  <a class="btn primary" href="/games/lattice-swarm/">▶ Play full Lattice Swarm</a>
+  <a class="btn" href="https://deepseekoracle.github.io/LYGOapps/">GitHub Pages</a>
+  <a class="btn" href="https://lygo.grok.me/" target="_blank" rel="noopener">grok.me backup</a>
+  <a class="btn" href="#play">Quick hex demo ↓</a>
 </div>
 </article>
 
+<article class="card" style="padding:0;overflow:hidden;border:1px solid #1e293b;background:#0a0514">
+  <div style="padding:.75rem 1rem;font-family:system-ui,sans-serif;font-size:.85rem;color:#94a3b8;border-bottom:1px solid #1e293b;display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap">
+    <span>Full game embed · Hex command · Agents · Entropy</span>
+    <a href="/games/lattice-swarm/" style="color:#22d3ee;font-weight:700">Open fullscreen →</a>
+  </div>
+  <iframe src="/games/lattice-swarm/" title="Lattice Swarm full game" style="width:100%;height:min(78vh,820px);border:0;display:block;background:#0a0514" loading="lazy" allow="autoplay"></iframe>
+</article>
+
 <article class="card dark-game" id="play">
-<h2 style="margin-top:0">Live hex resonance demo</h2>
-<p style="font-size:.9rem;color:#94a3b8;margin-top:0">Click hexes to deploy agents. Press <b>N</b> / Advance to pulse the lattice. Space pauses. Full game loop lives in the LYGOapps repo.</p>
+<h2 style="margin-top:0">Quick hex demo</h2>
+<p style="font-size:.9rem;color:#94a3b8;margin-top:0">Lightweight canvas if the embed is blocked. Prefer the <a href="/games/lattice-swarm/" style="color:#22d3ee">full game</a> for agents, HUD, and save.</p>
 <div class="hud">
   <span>Resonance <b id="score">0</b></span>
   <span>Entropy <b id="entropy">12%</b></span>

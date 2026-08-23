@@ -15,7 +15,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@Excavationpro">
 <meta name="theme-color" content="#03040a">
-<style>body{margin:0;background:#060810;color:#e2e8f0;font-family:Georgia,serif;line-height:1.65}a{color:#67e8f9}.wrap{max-width:960px;margin:0 auto;padding:1.25rem}.card{background:rgba(15,23,42,.7);border:1px solid #1e293b;border-radius:14px;padding:1.25rem;margin:1rem 0}.lead{color:#94a3b8}.btn{display:inline-block;padding:.65rem 1rem;border-radius:8px;text-decoration:none;font-family:system-ui,sans-serif;font-weight:700;border:1px solid #334155;color:#e2e8f0;margin:.2rem}.btn.primary{background:#fbbf24;color:#111;border-color:#fbbf24}.breadcrumb{font-size:.85rem;color:#64748b}</style>
+<link rel="stylesheet" href="/assets/site.css">
 <style>
 .dark-game{background:#03040a;color:#e8eef7;border-radius:16px;padding:1.25rem;border:1px solid #1e293b}
 .dark-game h2,.dark-game h3{color:#f8fafc;font-family:system-ui,sans-serif}
@@ -38,38 +38,46 @@
 .hud b{color:#fbbf24}
 </style>
 </head>
-<body style="background:#060810">
-<header style="padding:1rem 1.25rem;border-bottom:1px solid rgba(255,255,255,.08);display:flex;flex-wrap:wrap;gap:1rem;align-items:center;justify-content:space-between;background:rgba(6,8,16,.92);position:sticky;top:0;z-index:20">
-<a href="/" style="color:#fbbf24;font-weight:800;text-decoration:none;font-family:system-ui,sans-serif">eternalhaven.ca</a>
-<nav style="display:flex;flex-wrap:wrap;gap:.85rem;font-family:system-ui,sans-serif;font-size:.88rem">
-<a href="/lygo-hub.html" style="color:#94a3b8;text-decoration:none">LYGO Hub</a>
-<a href="/lygo-eternal-lattice.html" style="color:#67e8f9;text-decoration:none;font-weight:700">Eternal Lattice</a>
-<a href="/lygo-apps.html" style="color:#94a3b8;text-decoration:none">Lattice Swarm</a>
-<a href="/HavenStarChart.html" style="color:#94a3b8;text-decoration:none">Star Chart</a>
-<a href="/BiometricEntropyHarness.html" style="color:#94a3b8;text-decoration:none">Biometrics</a>
-<a href="https://chatagent.ca/" style="color:#67e8f9;text-decoration:none">chatagent.ca</a>
-</nav></header>
-<div class="wrap">
+<body>
+<header class="site"><div class="wrap nav">
+<a class="brand" href="/">Eternal Haven</a>
+<nav class="navlinks" aria-label="Primary">
+<a href="/">Home</a><a href="/guides/">Guides</a><a href="/champions.html">Champions</a>
+<a href="/app.html">Tools</a>
+<a href="/lygo-eternal-lattice.html" aria-current="page">Eternal Lattice</a>
+<a href="/lygo-apps.html">Lattice Swarm</a>
+<a href="/about.html">About</a>
+</nav></div></header>
+<div class="wrap prose">
 <p class="breadcrumb"><a href="/">Home</a> · Eternal Lattice</p>
 <article class="card">
 <p style="font-family:system-ui,sans-serif;font-size:.8rem;color:#64748b;letter-spacing:.12em;text-transform:uppercase;margin:0 0 .5rem">Δ9Φ963 · LYGO game</p>
 <h1 style="margin-top:0">LYGO: Eternal Lattice</h1>
-<p class="lead">Playable Δ9 champion card battles — unlock the fifteen council seats, build decks, forge seals, and sit the lattice. Local-first. No account required for this hub demo.</p>
+<p class="lead">Playable Δ9 champion card battles — unlock the fifteen council seats, build decks, forge seals, and sit the lattice. Local-first. No account required.</p>
 <p style="font-size:.9rem">Source: <a href="https://github.com/DeepSeekOracle/lygoeternallattice" target="_blank" rel="noopener">DeepSeekOracle/lygoeternallattice</a>
-· <a href="https://chatagent.ca/lygo-eternal-lattice.html">chatagent.ca</a>
-· <a href="https://eternalhaven.ca/lygo-eternal-lattice.html">eternalhaven.ca</a>
-· Companion: <a href="/lygo-apps.html">Lattice Swarm</a></p>
+· Full game: <a href="/games/eternal-lattice/">/games/eternal-lattice/</a>
+· Mirror: <a href="https://eternalhaven.ca/games/eternal-lattice/">eternalhaven</a>
+· Backup: <a href="https://lygoeternallattice.grok.me/" target="_blank" rel="noopener">grok.me</a>
+· Companion: <a href="/games/lattice-swarm/">Lattice Swarm</a></p>
 <div style="display:flex;flex-wrap:wrap;gap:.5rem;margin:1rem 0">
-  <a class="btn primary" href="#play">Play seat demo ↓</a>
-  <a class="btn" href="https://github.com/DeepSeekOracle/lygoeternallattice" target="_blank" rel="noopener">GitHub</a>
-  <a class="btn" href="https://chatagent.ca/champions.html">Champion directory</a>
-  <a class="btn" href="https://chatagent.ca/app.html">Summon portal</a>
+  <a class="btn primary" href="/games/eternal-lattice/">▶ Play full Eternal Lattice</a>
+  <a class="btn" href="https://deepseekoracle.github.io/lygoeternallattice/">GitHub Pages</a>
+  <a class="btn" href="https://lygoeternallattice.grok.me/" target="_blank" rel="noopener">grok.me backup</a>
+  <a class="btn" href="#play">Quick seat demo ↓</a>
 </div>
 </article>
 
+<article class="card" style="padding:0;overflow:hidden;border:1px solid #1e293b;background:#07080c">
+  <div style="padding:.75rem 1rem;font-family:system-ui,sans-serif;font-size:.85rem;color:#94a3b8;border-bottom:1px solid #1e293b;display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap">
+    <span>Full game embed · Campaign · Skirmish · Deckwright · Forge</span>
+    <a href="/games/eternal-lattice/" style="color:#fbbf24;font-weight:700">Open fullscreen →</a>
+  </div>
+  <iframe src="/games/eternal-lattice/" title="LYGO Eternal Lattice full game" style="width:100%;height:min(78vh,820px);border:0;display:block;background:#07080c" loading="lazy" allow="autoplay"></iframe>
+</article>
+
 <article class="card dark-game" id="play">
-<h2 style="margin-top:0">Live seat demo</h2>
-<p style="font-size:.9rem;color:#94a3b8;margin-top:0">Pick two champions and run a mock skirmish pulse. Full campaign / Deckwright / Lattice Link live in the app repo.</p>
+<h2 style="margin-top:0">Quick seat demo</h2>
+<p style="font-size:.9rem;color:#94a3b8;margin-top:0">Lightweight pulse if the embed is blocked. Prefer the <a href="/games/eternal-lattice/" style="color:#fbbf24">full game</a> for campaign, decks, and AI matches.</p>
 <div class="modes">
   <span class="chip">Campaign</span><span class="chip">Skirmish</span><span class="chip">Ranked</span>
   <span class="chip">Hot-seat</span><span class="chip">Lattice Link</span><span class="chip">Deckwright</span><span class="chip">Lattice Forge</span><span class="chip">Codex</span>
