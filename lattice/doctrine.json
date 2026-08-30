@@ -22,10 +22,10 @@
     "hooks": ["on_audit", "on_drift", "on_future_promote"]
   },
   "pairs_with": {
-    "witness": "https://eternalhaven.ca/witness/",
-    "godseye": "https://eternalhaven.ca/godseye/",
-    "skynet": "https://eternalhaven.ca/skynet/",
-    "starchart": "https://eternalhaven.ca/starchart/",
+    "witness": "https://chatagent.ca/witness/",
+    "godseye": "https://chatagent.ca/godseye/",
+    "skynet": "https://chatagent.ca/skynet/",
+    "starchart": "https://chatagent.ca/starchart/",
     "agora": "https://deepseekoracle.github.io/lygo-protocol-stack/agent-agora/",
     "chart": "https://deepseekoracle.github.io/lygo-protocol-stack/HavenStarChart.html",
     "hf_bot": "https://huggingface.co/spaces/DeepSeekOracle/lygo-star-chart-bot",
