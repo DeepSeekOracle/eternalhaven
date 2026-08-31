@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://eternalhaven.ca/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://eternalhaven.ca/blog/</loc><lastmod>2026-08-31</lastmod><changefreq>weekly</changefreq><priority>0.92</priority></url>
+  <url><loc>https://eternalhaven.ca/blog/the-lantern-is-still-on.html</loc><lastmod>2026-08-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://eternalhaven.ca/blog/lurk-friendly-radio.html</loc><lastmod>2026-08-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://eternalhaven.ca/blog/empty-beats-fake.html</loc><lastmod>2026-08-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://eternalhaven.ca/blog/tap-tempo-and-the-body.html</loc><lastmod>2026-08-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://eternalhaven.ca/blog/four-books-and-a-long-road.html</loc><lastmod>2026-08-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://eternalhaven.ca/blog/what-a-public-globe-is-for.html</loc><lastmod>2026-08-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://eternalhaven.ca/lygo-hub.html</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
   <url><loc>https://eternalhaven.ca/privacy.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
   <url><loc>https://eternalhaven.ca/lygo-eternal-lattice.html</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>

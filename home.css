@@ -33,3 +33,26 @@ footer.site { border-top:1px solid var(--line); padding:1.5rem 6vw 2.4rem; font-
 footer.site nav { display:flex; flex-wrap:wrap; gap:.5rem 1rem; margin-bottom:.7rem; }
 .chip-row { display:flex; flex-wrap:wrap; gap:.45rem; }
 .chip { display:inline-block; padding:.35rem .65rem; border:1px solid var(--line); border-radius:999px; text-decoration:none; color:var(--fg) !important; font-size:.82rem; }
+
+/* long-form blog pages */
+body.page { margin:0; background:var(--bg); color:var(--fg); font-family:Syne,system-ui,sans-serif; line-height:1.7; }
+.page a { color:var(--accent); }
+.page header.top { position:relative; display:flex; justify-content:space-between; align-items:center; padding:1.05rem 6vw; font-size:.78rem; letter-spacing:.12em; text-transform:uppercase; border-bottom:1px solid var(--line); }
+.page .brand { color:var(--fg); text-decoration:none; font-weight:800; letter-spacing:.14em; }
+.page nav a { color:var(--fg); text-decoration:none; opacity:.82; margin-left:.8rem; }
+.page nav a[aria-current="page"], .page nav a:hover { color:var(--gold); opacity:1; }
+.essay { max-width:42rem; margin:0 auto; padding:2.2rem 6vw 4.5rem; }
+.essay .kicker { font-family:"IBM Plex Mono",ui-monospace,monospace; letter-spacing:.22em; font-size:.68rem; color:var(--gold); text-transform:uppercase; margin:0 0 .6rem; }
+.essay h1 { font-family:"Cormorant Garamond",Georgia,serif; font-weight:500; font-size:clamp(1.9rem,4.6vw,2.7rem); line-height:1.12; margin:0 0 .7rem; }
+.essay .lede { color:var(--muted); font-size:1.12rem; margin:0 0 1.4rem; }
+.essay h2 { font-family:"Cormorant Garamond",Georgia,serif; font-size:1.45rem; font-weight:500; color:var(--gold); margin:2rem 0 .55rem; }
+.essay p { color:#ddd4c8; font-size:1.05rem; margin:0 0 1.05rem; }
+.essay li { color:#ddd4c8; margin:.3rem 0; }
+.essay .meta { font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:.72rem; color:var(--muted); letter-spacing:.04em; margin:0 0 1.4rem; }
+.post-list { list-style:none; padding:0; margin:0; }
+.post-list li { border-bottom:1px solid var(--line); padding:1.15rem 0; }
+.post-list h2 { font-family:"Cormorant Garamond",Georgia,serif; font-size:1.45rem; margin:0 0 .3rem; }
+.post-list h2 a { color:var(--fg); text-decoration:none; }
+.post-list h2 a:hover { color:var(--gold); }
+.post-list .meta { margin:0 0 .4rem; }
+.more { margin-top:2.4rem; padding-top:1.2rem; border-top:1px solid var(--line); color:var(--muted); font-size:.92rem; }
