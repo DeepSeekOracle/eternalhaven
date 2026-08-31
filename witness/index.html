@@ -8,7 +8,7 @@
 <meta name="description" content="LYGO Public Witness: public nodes are resources; private nodes are named shadows with legal public check-links. Dual ledgers and Star Chart are canon. Never invent private payloads.">
 <meta name="author" content="Justin Helmer / Excavationpro">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
-<link rel="canonical" href="https://eternalhaven.ca/witness/">
+<link rel="canonical" href="https://chatagent.ca/witness/">
 <link rel="icon" href="/witness/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,35 +17,37 @@
 <meta name="google-adsense-account" content="ca-pub-0646320966060599">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0646320966060599" crossorigin="anonymous"></script>
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://eternalhaven.ca/witness/">
+<meta property="og:url" content="https://chatagent.ca/witness/">
 <meta property="og:title" content="LYGO Public Witness — public is reference, lattice is canon">
 <meta property="og:description" content="Two globes. Earth shows public signals as REFERENCE. The lattice sphere shows dual ledgers, eggs, and Star Chart as CANON. No invented intel.">
-<meta property="og:image" content="https://eternalhaven.ca/witness/og.jpg">
+<meta property="og:image" content="https://chatagent.ca/witness/og.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@Excavationpro">
 <meta name="twitter:title" content="LYGO Public Witness">
 <meta name="twitter:description" content="Public feeds are reference. Lattice ledgers are canon. Empty beats fake.">
-<meta name="twitter:image" content="https://eternalhaven.ca/witness/og.jpg">
+<meta name="twitter:image" content="https://chatagent.ca/witness/og.jpg">
 </head>
 <body>
 <div class="mast">
 <header class="top">
-  <a class="brand" href="https://chatagent.ca/">chatagent.ca</a>
+  <a class="brand" href="/">chatagent.ca</a>
   <nav>
-    <a href="https://chatagent.ca/">Home</a>
-    <a href="https://chatagent.ca/guides/">Guides</a>
-    <a href="https://chatagent.ca/champions.html">Champions</a>
-    <a href="https://chatagent.ca/games/">Games</a>
-    <a href="https://chatagent.ca/app.html">Tools</a>
-    <a href="/witness/" aria-current="page">Witness</a>
+    <a href="/">Home</a>
+    <a href="/guides/">Guides</a>
+    <a href="/champions.html">Champions</a>
+    <a href="/games/">Games</a>
+    <a href="/app.html">Tools</a>
     <a href="/lattice/">Lattice</a>
+    <a href="/sources/">TV</a>
+    <a href="https://asiancoastline.com/listen.html" target="_blank" rel="noopener noreferrer">Listen</a>
+    <a href="/witness/" aria-current="page">Witness</a>
     <a href="/godseye/">God's Eye</a>
     <a href="/skynet/">SKYNET</a>
     <a href="/starchart/">Star Chart</a>
-    <a href="https://chatagent.ca/lygoskillhub.html">SkillHub</a>
-    <a href="https://chatagent.ca/about.html">About</a>
+    <a href="/lygoskillhub.html">SkillHub</a>
+    <a href="/about.html">About</a>
     <a class="nav-donate" href="https://www.paypal.com/paypalme/ExcavationPro" target="_blank" rel="noopener noreferrer">Donate</a>
   </nav>
 </header>
@@ -194,9 +196,11 @@
     <pre class="out" id="ollama-out">Ollama is optional (localhost:11434). Pair with lygo-ollama-army.</pre>
     <p class="legend">Agents: <code>npx clawhub@latest install deepseekoracle/lygo-public-witness</code><br>
     FULL zip: <a href="/lygoskillhub.html#full-lygo">SkillHub</a> ·
-    Chart: <a href="https://deepseekoracle.github.io/lygo-protocol-stack/HavenStarChart.html">Haven Star Chart</a> ·
+    Eye: <a href="/godseye/">God's Eye</a> ·
+    Chart: <a href="/starchart/">Star Chart live</a> ·
+    Canon: <a href="https://deepseekoracle.github.io/lygo-protocol-stack/HavenStarChart.html">Haven Star Chart</a> ·
     Eggs: <a href="https://deepseekoracle.github.io/lygo-protocol-stack/KernelEggRetrieval.html">Kernel eggs</a> ·
-    Guide: <a href="https://chatagent.ca/guides/lygo-public-witness.html">Doctrine</a>
+    Guide: <a href="/guides/lygo-public-witness.html">Doctrine</a>
     </p>
     <p class="legend" id="sig"></p>
   </aside>
@@ -209,8 +213,9 @@
   <div class="cam-grid" id="cam-grid"></div>
   <p class="kicker">Public monitor · disasters and severe headlines</p>
   <h2>World disaster &amp; severe news monitor</h2>
-  <p class="legend">GDACS, USGS significant quakes, BBC World, Guardian World, NYT World — public RSS/ATOM only. Severe lane = disaster agencies plus a keyword filter. Headlines stay RESOURCE; we do not invent the story.</p>
-  <div class="news-grid">
+  <p class="legend">Public GET only: GDACS, USGS, ReliefWeb, NHC, NASA EONET, NWS, UN News, WHO, BBC/Guardian/NYT World. Severe lane = disaster agencies plus a keyword filter. Headlines stay <strong>RESOURCE</strong>. The event ledger is an append-only public log — <strong>not</strong> Star Chart CANON. Empty beats fake.</p>
+  <p class="legend" id="news-meta">Monitor · waiting…</p>
+  <div class="news-grid three">
     <div class="news-col">
       <h3>Severe / disaster <span id="st-news-sev" class="tag miss">…</span></h3>
       <ul id="news-severe"></ul>
@@ -218,6 +223,11 @@
     <div class="news-col">
       <h3>World public wire <span id="st-news-world" class="tag miss">…</span></h3>
       <ul id="news-world"></ul>
+    </div>
+    <div class="news-col">
+      <h3>Eternal event ledger <span id="st-news-led" class="tag miss">…</span></h3>
+      <p class="src" id="ledger-tip">RESOURCE log · tip pending</p>
+      <ul id="news-ledger"></ul>
     </div>
   </div>
 </section>
