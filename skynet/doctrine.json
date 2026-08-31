@@ -2,7 +2,7 @@
   "signature": "Delta9Phi963-LYGO-SKYNET-v1.0.0",
   "name": "LYGO SKYNET",
   "expansion": "Sentinel Kernel Yielding Named Ethical Trust",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "protocol": "AETHONΔ9",
   "ops_bar": 0.65,
   "doctrine": {
@@ -17,10 +17,11 @@
     "WIRE": "God's Eye iris + Witness globe + Agora + Star Chart monitor"
   },
   "pairs_with": {
-    "godseye": "https://chatagent.ca/godseye/",
-    "witness": "https://chatagent.ca/witness/",
-    "starchart": "https://chatagent.ca/starchart/",
-    "lattice": "https://chatagent.ca/lattice/",
+    "godseye": "https://eternalhaven.ca/godseye/",
+    "witness": "https://eternalhaven.ca/witness/",
+    "starchart": "https://eternalhaven.ca/starchart/",
+    "lattice": "https://eternalhaven.ca/lattice/",
+    "site": "https://eternalhaven.ca/skynet/",
     "ops_detector": "clawhub:@deepseekoracle/lygo-ops-detector",
     "cyborg": "https://chatagent.ca/lygoskillhub.html#full-lygo"
   }
