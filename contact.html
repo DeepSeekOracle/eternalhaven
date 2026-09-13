@@ -1,6 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-cookie-key="eternalhaven_cookies">
 <head>
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/favicon.svg">
+<link rel="stylesheet" href="/assets/site-kit.css">
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Contact — Eternal Haven</title>
@@ -14,6 +18,7 @@
 <meta property="og:title" content="Contact — Eternal Haven">
 <meta property="og:url" content="https://eternalhaven.ca/contact.html">
 <meta property="og:image" content="https://eternalhaven.ca/assets/og-home.jpg">
+<meta property="og:image:alt" content="eternalhaven.ca">
 </head>
 <body class="essay-site">
 <header class="mast"><div class="mast-inner">
@@ -31,6 +36,28 @@
   <h1>Contact</h1>
   <p class="lede">This is a one-person house. I read mail. I do not run a ticket queue. If you write, say which room you came from: books, music, games, or essays.</p>
   <div class="prose">
+    
+    <h2>On-site form</h2>
+    <p>Public contact remains <a href="https://x.com/excavationpro">@Excavationpro</a> on X and GitHub DeepSeekOracle. No street address is published.</p>
+    <form class="contact-form" id="contactForm" action="/thanks.html" method="get" novalidate>
+      <div class="field">
+        <label for="cname">Name</label>
+        <input id="cname" name="name" required autocomplete="name">
+        <p class="field-err">Please enter your name.</p>
+      </div>
+      <div class="field">
+        <label for="cemail">Email</label>
+        <input id="cemail" name="email" type="email" required autocomplete="email">
+        <p class="field-err">Please enter a valid email.</p>
+      </div>
+      <div class="field">
+        <label for="cmsg">Message</label>
+        <textarea id="cmsg" name="msg" rows="5" required></textarea>
+        <p class="field-err">Please write a short message. Do not paste secrets.</p>
+      </div>
+      <button type="submit">Send</button>
+    </form>
+
     <h2>How to reach me</h2>
     <p>Public: <a href="https://twitter.com/Excavationpro">@Excavationpro</a> on X. That is the fastest public door. I do not require a follow, and I do not require a performance. A short, specific note beats a pitch deck.</p>
     <p>Support (not a support desk): <a href="https://www.paypal.com/paypalme/ExcavationPro">PayPal.me/ExcavationPro</a> · <a href="https://www.patreon.com/Excavationpro">Patreon / Excavationpro</a>. A payment is a gift. It does not buy a private chapter, a ranking, or a different ending.</p>
@@ -53,5 +80,19 @@
   <p>© <span class="y"></span> Justin Helmer / Eternal Haven.</p>
 </div></footer>
 <script>document.querySelectorAll(".y").forEach(function(n){n.textContent=new Date().getFullYear()});</script>
+
+<div class="sticky-cta" aria-label="Mobile actions">
+  <a class="pri" href="/blog/">Essays</a>
+  <a class="sec" href="https://www.paypal.com/paypalme/ExcavationPro">Donate</a>
+</div>
+<div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Cookie consent">
+  <div>Ads may use cookies after you accept. <a href="/privacy.html">Privacy</a></div>
+  <div>
+    <button type="button" class="ok" id="cookieOk">Accept</button>
+    <button type="button" class="no" id="cookieNo">Decline</button>
+  </div>
+</div>
+<script src="/assets/site-kit.js" defer></script>
+
 </body>
 </html>
