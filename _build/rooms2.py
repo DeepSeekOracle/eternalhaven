@@ -132,6 +132,7 @@ room({
 <p>The long version is <a href="/music.html">Music in this house</a>. The short version: a track is mixed, mastered, encoded to a stream, given an identity, hashed, published, and then linked from a page that explains it. The hash is not decoration. It means the file you hear is the file that was published, which matters more for a small catalog than for a large one, because a small catalog has no legal department to argue for it.</p>
 <h2>Live rooms</h2>
 <p>When there is a live room, the links are on <a href="https://excavationpro.ca/">excavationpro.ca</a> and in the <a href="/lygo-hub.html">hub</a>. I do not embed a player that starts by itself on this page, because a page about listening should not make noise before you choose to listen.</p>
+<p>One more practical note: the catalog is large, so the player loads a first page of results and then more as you scroll. If a search returns nothing, try a shorter phrase — the index matches titles and aliases, not lyrics. And if a track fails to start, the backup door above is the fastest test of whether the problem is the host or your browser.</p>
 """,
     "related": [
         ("/music.html", "Music in this house"),

@@ -76,8 +76,9 @@
     "font-weight:700;border-radius:9px;padding:.55rem .8rem;font-size:.8rem}",
     "#lygoDiscordModal .join small{color:#8e8375;font-size:.7rem;max-width:20ch}",
     "body:has(.cookie-banner.show) #lygoDiscordBtn{bottom:96px}",
-    "@media(max-width:520px){#lygoDiscordBtn{right:12px;bottom:12px;padding:.6rem .8rem;font-size:.76rem}",
-    "body:has(.cookie-banner.show) #lygoDiscordBtn{bottom:88px}",
+    "@media(max-width:820px){#lygoDiscordBtn{display:none}}",
+    "@media(max-width:520px){#lygoDiscordBtn{right:12px;padding:.6rem .8rem;font-size:.76rem}",
+    "body:has(.cookie-banner.show) #lygoDiscordBtn{bottom:196px}",
     "#lygoDiscordModal iframe{height:320px}}",
     "@media(prefers-reduced-motion:reduce){#lygoDiscordBtn{transition:none}}"
   ].join("");

@@ -50,6 +50,7 @@ TEMPLATE = Template("""<!DOCTYPE html>
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/assets/favicon.svg">
 <link rel="stylesheet" href="/blog/blog.css">
+<link rel="stylesheet" href="/assets/workshop-footer.css">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500&family=IBM+Plex+Mono:wght@400&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <meta name="google-adsense-account" content="$pub">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=$pub" crossorigin="anonymous"></script>
@@ -90,18 +91,20 @@ $body
 $related
   <div class="author"><div class="avatar" aria-hidden="true">JH</div><div><h3>Justin Helmer</h3><p>Writes the Eternal Haven saga and the essays on this domain, publishes music as Excavationpro, and keeps the lantern on at <a href="/start.html">/start.html</a>.</p></div></div>
 </article>
-<div class="workshop">
-<p><strong>More from the workshop:</strong>
-<a href="https://excavationpro.ca/">Excavationpro</a> &middot;
-<a href="https://asiancoastline.com/">Asian Coastline</a> &middot;
-<a href="https://bpmfinder.ca/">BPMfinder</a> &middot;
-<a href="https://justinhelmer.ca/">Justin Helmer</a> &middot;
-<a href="https://deepseekoracle.com/">DeepSeek Oracle</a> &middot;
-<a href="https://chatagent.ca/">Chatagent</a> &middot;
-<a href="https://bpmfinder.ca/tools.html">All tools</a></p>
-</div>
 <footer class="foot"><div class="foot-inner">
   <nav><a href="/">Home</a> <a href="/start.html">Start here</a> <a href="/books/">Books</a> <a href="/blog/">Essays</a> <a href="/glossary.html">Glossary</a> <a href="/music.html">Music</a> <a href="/tools.html">Tools</a> <a href="/games/">Games</a> <a href="/contact.html">Contact</a> <a href="/privacy.html">Privacy</a> <a href="/terms.html">Terms</a> <a href="/editorial-standards.html">Standards</a></nav>
+  <div class="workshop-nav">
+    <p class="workshop-title" id="workshop-title">The workshop</p>
+    <ul aria-labelledby="workshop-title">
+      <li><a href="https://excavationpro.ca/">Excavationpro<span>music, essays, image studio</span></a></li>
+      <li><a href="https://asiancoastline.com/">Asian Coastline<span>free listen player</span></a></li>
+      <li><a href="https://bpmfinder.ca/">BPMfinder<span>tempo tools and guides</span></a></li>
+      <li><a href="https://justinhelmer.ca/">Justin Helmer<span>author site</span></a></li>
+      <li><a href="https://deepseekoracle.com/">DeepSeek Oracle<span>systems and whitepapers</span></a></li>
+      <li><a href="https://chatagent.ca/">Chatagent<span>portal and arcade</span></a></li>
+    </ul>
+    <p class="workshop-tools"><a href="https://bpmfinder.ca/tools.html">All tools &rarr;</a><span class="sep" aria-hidden="true"> &middot; </span><a href="https://discord.gg/ktGcEkVN9" rel="noopener">Discord server</a></p>
+  </div>
   <p>&copy; <span class="y"></span> Justin Helmer / Eternal Haven. Original writing. Empty beats fake.</p>
 </div></footer>
 <script>document.querySelectorAll(".y").forEach(function(n){n.textContent=new Date().getFullYear()});</script>
@@ -184,9 +187,7 @@ CSS = """.cookie-banner{position:fixed;left:12px;right:12px;bottom:16px;z-index:
 .cookie-banner a{color:#8ec8e8}
 .cookie-banner button{cursor:pointer;border-radius:8px;padding:.45rem .85rem;font-weight:600;border:1px solid rgba(244,238,230,.16);background:transparent;color:#f4eee6}
 .cookie-banner .ok{background:#d4b56a;color:#1a140c;border-color:#d4b56a}
-.workshop{max-width:70rem;margin:0 auto;padding:0 5vw 2rem;font-size:.84rem;line-height:1.8;color:#a89b8c}
-.workshop a{color:#a89b8c;text-decoration:none}
-.workshop a:hover{color:#d4b56a}"""
+"""
 
 
 def main() -> int:

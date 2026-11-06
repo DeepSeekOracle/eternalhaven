@@ -37,6 +37,7 @@
 .hud{display:flex;flex-wrap:wrap;gap:.75rem;margin:.75rem 0;font-family:system-ui,sans-serif;font-size:.85rem;color:#cbd5e1}
 .hud b{color:#fbbf24}
 </style>
+<link rel="stylesheet" href="/assets/workshop-footer.css">
 </head>
 <body>
 <header class="site"><div class="wrap nav">
@@ -242,14 +243,20 @@
 <p>Lattice Swarm began as a command toy: a hex grid, a handful of units, and a rule set small enough to hold in your head. This page runs the grid in the browser so the idea can be poked without an install. It is a demonstration, not a campaign &#8212; there is no progression, no save, and no balance pass.</p>
 <p>The playable build, with the rest of the arcade, lives at <a href="https://chatagent.ca/games/">chatagent.ca/games</a>. The <a href="/games/">games page</a> on this domain explains what each title is and which one to open first. If you want the design argument behind a game that does not ask for an account, read <a href="/blog/a-browser-golf-course-is-a-house.html">A browser golf course is a house</a>.</p>
 </section>
-<div style="max-width:820px;margin:2rem auto;padding:0 1.15rem;font-size:.84rem;line-height:1.7;opacity:.85">
-<p><strong>More from the workshop:</strong>
-<a href="https://excavationpro.ca/">Excavationpro</a> &middot;
-<a href="https://asiancoastline.com/">Asian Coastline</a> &middot;
-<a href="https://bpmfinder.ca/">BPMfinder</a> &middot;
-<a href="https://justinhelmer.ca/">Justin Helmer</a> &middot;
-<a href="https://deepseekoracle.com/">DeepSeek Oracle</a> &middot;
-<a href="https://chatagent.ca/">Chatagent</a> &middot;
-<a href="https://bpmfinder.ca/tools.html">All tools</a></p>
-</div>
+<footer class="foot"><div class="foot-inner">
+<div class="workshop-nav">
+    <p class="workshop-title" id="workshop-title">The workshop</p>
+    <ul aria-labelledby="workshop-title">
+      <li><a href="https://excavationpro.ca/">Excavationpro<span>music, essays, image studio</span></a></li>
+      <li><a href="https://asiancoastline.com/">Asian Coastline<span>free listen player</span></a></li>
+      <li><a href="https://bpmfinder.ca/">BPMfinder<span>tempo tools and guides</span></a></li>
+      <li><a href="https://justinhelmer.ca/">Justin Helmer<span>author site</span></a></li>
+      <li><a href="https://deepseekoracle.com/">DeepSeek Oracle<span>systems and whitepapers</span></a></li>
+      <li><a href="https://chatagent.ca/">Chatagent<span>portal and arcade</span></a></li>
+    </ul>
+    <p class="workshop-tools"><a href="https://bpmfinder.ca/tools.html">All tools &rarr;</a><span class="sep" aria-hidden="true"> &middot; </span><a href="https://discord.gg/ktGcEkVN9" rel="noopener">Discord server</a></p>
+  </div>
+  <p>&copy; <span class="y"></span> Justin Helmer / Eternal Haven.</p>
+</div></footer>
+<script>document.querySelectorAll(".y").forEach(function(n){n.textContent=new Date().getFullYear()});</script>
 </body></html>

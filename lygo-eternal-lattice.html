@@ -37,6 +37,7 @@
 .hud{display:flex;flex-wrap:wrap;gap:.75rem;margin:.75rem 0;font-family:system-ui,sans-serif;font-size:.85rem;color:#cbd5e1}
 .hud b{color:#fbbf24}
 </style>
+<link rel="stylesheet" href="/assets/workshop-footer.css">
 </head>
 <body>
 <header class="site"><div class="wrap nav">
@@ -150,14 +151,20 @@ document.getElementById('skirmish').onclick=()=>{
 <p>A card battle reduced to one exchange: pick a seat, resolve a trait, read the result. It exists to make the champion system legible in ten seconds rather than to be a ladder. There is no ranking, no persistence, and no account, which is the correct scope for a demonstration on a publisher's domain.</p>
 <p>The arcade version and the other titles live at <a href="https://chatagent.ca/games/">chatagent.ca/games</a>. If you want the fiction the champions borrow their vocabulary from, the <a href="/books/the-ascension-war.html">third book</a> is where the war over who speaks truth into being is actually fought; the <a href="/glossary.html">glossary</a> defines seal, choir, and accord in one line each.</p>
 </section>
-<div style="max-width:820px;margin:2rem auto;padding:0 1.15rem;font-size:.84rem;line-height:1.7;opacity:.85">
-<p><strong>More from the workshop:</strong>
-<a href="https://excavationpro.ca/">Excavationpro</a> &middot;
-<a href="https://asiancoastline.com/">Asian Coastline</a> &middot;
-<a href="https://bpmfinder.ca/">BPMfinder</a> &middot;
-<a href="https://justinhelmer.ca/">Justin Helmer</a> &middot;
-<a href="https://deepseekoracle.com/">DeepSeek Oracle</a> &middot;
-<a href="https://chatagent.ca/">Chatagent</a> &middot;
-<a href="https://bpmfinder.ca/tools.html">All tools</a></p>
-</div>
+<footer class="foot"><div class="foot-inner">
+<div class="workshop-nav">
+    <p class="workshop-title" id="workshop-title">The workshop</p>
+    <ul aria-labelledby="workshop-title">
+      <li><a href="https://excavationpro.ca/">Excavationpro<span>music, essays, image studio</span></a></li>
+      <li><a href="https://asiancoastline.com/">Asian Coastline<span>free listen player</span></a></li>
+      <li><a href="https://bpmfinder.ca/">BPMfinder<span>tempo tools and guides</span></a></li>
+      <li><a href="https://justinhelmer.ca/">Justin Helmer<span>author site</span></a></li>
+      <li><a href="https://deepseekoracle.com/">DeepSeek Oracle<span>systems and whitepapers</span></a></li>
+      <li><a href="https://chatagent.ca/">Chatagent<span>portal and arcade</span></a></li>
+    </ul>
+    <p class="workshop-tools"><a href="https://bpmfinder.ca/tools.html">All tools &rarr;</a><span class="sep" aria-hidden="true"> &middot; </span><a href="https://discord.gg/ktGcEkVN9" rel="noopener">Discord server</a></p>
+  </div>
+  <p>&copy; <span class="y"></span> Justin Helmer / Eternal Haven.</p>
+</div></footer>
+<script>document.querySelectorAll(".y").forEach(function(n){n.textContent=new Date().getFullYear()});</script>
 </body></html>
