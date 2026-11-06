@@ -1,5 +1,38 @@
 # CHANGES — eternalhaven.ca
 
+## 2026-11-06 (later still) — home page was hero + one paragraph + a video
+
+The word count was there (923 prose words) but a reviewer never reached it: a full-viewport
+**LYGO TV / Rumble embed** sat directly under the hero on `index.html`, pushing every article below
+a screen-sized third-party video. On a phone the first screen was the hero, one paragraph, and six
+stacked buttons.
+
+- **Video embed removed from the homepage** (with its CSS/JS, ~12 KB). It existed only on this page;
+  the live room is still linked from the music pages.
+- Front page rebuilt **prose-first**: "Why this house exists" (six paragraphs, ~600 words) now starts
+  immediately under the hero, before any card grid, media, or ad. Section order after that: books →
+  essays → music → games and tools → how the site is kept → support.
+- Hero CTAs cut from six to four; on phones they are a 2×2 grid instead of six full-width buttons.
+- Mobile hero shortened to 76svh so the first line of the essay is on the opening screen.
+- Home prose: **1,199 words** (was 923, and was 639 before this pass).
+
+## 2026-11-06 (later) — footer rebuilt
+
+The six-site cross-link block ("More from the workshop …") was a floating, unstyled paragraph
+sitting between the article and the footer on 62 pages. It duplicated the footer's own link row,
+matched neither the content column nor the footer grid, and on `games/index.html` it had drifted
+into the middle of the page.
+
+- `assets/workshop-footer.css` (new): "The workshop" is now a labelled six-column grid inside the
+  footer, one line of context per site, 3 columns under 900 px, 2 under 520 px (descriptions
+  dropped on phones so nothing overflows).
+- The block moved inside `<footer>`, above the copyright line, on every page; the orphan
+  paragraphs and the duplicated `.family` row are gone.
+- `All tools` and `Discord server` share one line under the grid.
+- `site-kit.js`: the floating Discord pill is hidden below 820 px — it was stacking on top of the
+  sticky CTA bar and over footer links. Discord is now reachable from the footer on every page.
+- The fixed cookie notice no longer covers the copyright line (body padding while it is shown).
+
 ## 2026-11-06 — full content pass (AdSense low-value-content repair)
 
 AdSense declined the site for "low value content" after several review attempts. The measured

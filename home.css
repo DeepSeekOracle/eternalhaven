@@ -25,6 +25,9 @@ main.sheet { padding:0 6vw 3.5rem; max-width:52rem; margin:0 auto; }
 .home article p, .home li { color:#ddd4c8; }
 .notice { margin:1rem 0 0; padding:.85rem 1rem; border:1px solid var(--line); border-radius:10px; color:var(--muted); font-size:.92rem; }
 @media (max-width:820px){
+  .hero{min-height:76svh}
+  .hero-inner{padding:0 6vw 4.5vh}
+  body.home .cta-row .btn{width:auto;flex:1 1 calc(50% - .3rem);text-align:center;padding:.62rem .5rem;font-size:.82rem}
   .home header.top{flex-wrap:wrap;gap:.45rem;padding:.75rem 5vw .6rem;background:linear-gradient(180deg,rgba(7,6,11,.85),transparent)}
   .home header.top nav{display:flex;width:100%;overflow-x:auto;gap:1rem;padding-bottom:.15rem;white-space:nowrap;scrollbar-width:none;-ms-overflow-style:none}
   .home header.top nav::-webkit-scrollbar{display:none}
