@@ -1,12 +1,99 @@
 <!DOCTYPE html>
-<html lang="en"><head>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0646320966060599"
-     crossorigin="anonymous"></script>
-<meta charset="utf-8">
-<meta http-equiv="refresh" content="0;url=https://deepseekoracle.github.io/lygo-protocol-stack/BiometricEntropyHarness.html">
-<link rel="canonical" href="https://deepseekoracle.github.io/lygo-protocol-stack/BiometricEntropyHarness.html">
-<title>Redirecting…</title>
-<script>location.replace("https://deepseekoracle.github.io/lygo-protocol-stack/BiometricEntropyHarness.html");</script>
-</head><body>
-<p>Moved to <a href="https://deepseekoracle.github.io/lygo-protocol-stack/BiometricEntropyHarness.html">https://deepseekoracle.github.io/lygo-protocol-stack/BiometricEntropyHarness.html</a></p>
-</body></html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Biometric Entropy Harness — timing as entropy, explained | Eternal Haven</title>
+<meta name="description" content="What the Biometric Entropy Harness demonstration does: collecting keystroke and pointer timing as entropy, measuring it honestly, and the limits of a browser demo.">
+<meta name="author" content="Justin Helmer">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
+<link rel="canonical" href="https://eternalhaven.ca/BiometricEntropyHarness.html">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/favicon.svg">
+<link rel="stylesheet" href="/blog/blog.css">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500&family=IBM+Plex+Mono:wght@400&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<meta name="google-adsense-account" content="ca-pub-0646320966060599">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0646320966060599" crossorigin="anonymous"></script>
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://eternalhaven.ca/BiometricEntropyHarness.html">
+<meta property="og:title" content="Biometric Entropy Harness — timing as entropy, explained">
+<meta property="og:description" content="What the Biometric Entropy Harness demonstration does: collecting keystroke and pointer timing as entropy, measuring it honestly, and the limits of a browser demo.">
+<meta property="og:site_name" content="Eternal Haven">
+<meta property="og:image" content="https://eternalhaven.ca/assets/og-home.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Eternal Haven — a library under a star vault">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@Excavationpro">
+<meta name="twitter:creator" content="@Excavationpro">
+<meta name="twitter:title" content="Biometric Entropy Harness — timing as entropy, explained">
+<meta name="twitter:description" content="What the Biometric Entropy Harness demonstration does: collecting keystroke and pointer timing as entropy, measuring it honestly, and the limits of a browser demo.">
+<meta name="twitter:image" content="https://eternalhaven.ca/assets/og-home.jpg">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","name":"The Biometric Entropy Harness","url":"https://eternalhaven.ca/BiometricEntropyHarness.html","author":{"@type":"Person","name":"Justin Helmer"},"about":{"@type":"WebApplication","name":"Biometric Entropy Harness","url":"https://deepseekoracle.github.io/lygo-protocol-stack/BiometricEntropyHarness.html"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://eternalhaven.ca/"},{"@type":"ListItem","position":2,"name":"Biometric Entropy Harness"}]}]}</script>
+<style>
+.cookie-banner{position:fixed;left:12px;right:12px;bottom:16px;z-index:90;max-width:36rem;margin:0 auto;padding:.9rem 1rem;background:#121018;border:1px solid rgba(244,238,230,.16);border-radius:12px;color:#a89b8c;font:500 .88rem/1.45 system-ui,sans-serif;display:none;gap:.5rem;align-items:flex-start;justify-content:space-between;flex-wrap:wrap}
+.cookie-banner.show{display:flex}
+.cookie-banner a{color:#8ec8e8}
+.cookie-banner button{cursor:pointer;border-radius:8px;padding:.45rem .85rem;font-weight:600;border:1px solid rgba(244,238,230,.16);background:transparent;color:#f4eee6}
+.cookie-banner .ok{background:#d4b56a;color:#1a140c;border-color:#d4b56a}
+.workshop{max-width:70rem;margin:0 auto;padding:0 5vw 2rem;font-size:.84rem;line-height:1.8;color:#a89b8c}
+.workshop a{color:#a89b8c;text-decoration:none}
+.workshop a:hover{color:#d4b56a}
+</style>
+</head>
+<body class="essay-site">
+<header class="mast"><div class="mast-inner">
+  <a class="mark" href="/">Eternal Haven</a>
+  <nav><a href="/">Home</a> <a href="/start.html">Start</a> <a href="/books/">Books</a> <a href="/blog/">Essays</a> <a href="/glossary.html">Glossary</a> <a href="/music.html">Music</a> <a href="/tools.html">Tools</a> <a href="/about.html">About</a></nav>
+</div></header>
+<article class="wrap">
+  <p class="crumb"><a href="/">Home</a> &#183; Biometric Entropy Harness</p>
+  <p class="kicker">Room &#183; randomness from a body</p>
+  <h1>The Biometric Entropy Harness</h1>
+  <p class="lede">Where do keys come from when you do not trust the machine's own randomness? This demo harvests timing from a human hand, measures it, and shows you the audit.</p>
+  <div class="byline"><div class="avatar" aria-hidden="true">JH</div><div><strong>Justin Helmer</strong><br>Room guide &#183; updated 6 November 2026 &#183; about an eight-minute read</div></div>
+  <div class="prose">
+
+<p>Cryptography has a quiet dependency that most people never think about: every key starts as a random number, and a computer is bad at being random. It is a deterministic machine doing arithmetic. So every serious system harvests randomness from the physical world &#8212; disk timing, network jitter, a hardware chip that measures thermal noise &#8212; and then measures how much randomness it actually got.</p>
+<p>This harness is a demonstration of the human version. A person's hand is a physical process: keystroke intervals, the tiny pause before a decision, the arc of a pointer. None of it is deterministic. The page collects that timing, runs it through a conditioning step, and shows you the audit, so you can see the difference between "we collected some numbers" and "we collected enough entropy to seed a key".</p>
+<p>The live demo is <a href="https://deepseekoracle.github.io/lygo-protocol-stack/BiometricEntropyHarness.html">the interactive harness</a>. This page is the honest manual, including the part where I tell you what it cannot do.</p>
+<h2>What it measures</h2>
+<p>Three streams, all of them timing rather than content. Inter-key intervals while you type a phrase. Pointer path deviations, which carry small motor corrections nobody consciously controls. And pause distributions, which are the closest thing to a signature a human hand has.</p>
+<p>There is a reason the harness never asks for a fingerprint and never records what you type (beyond the phrase it gives you). A biometric system that stores the biometric is a liability; a system that measures the <em>timing</em> of a hand and immediately reduces it to a hash is not storing anything about you that survives. That distinction is the difference between an authentication product and a demo worth publishing.</p>
+<h2>What the audit shows</h2>
+<p>Raw timing is not uniform. Human pauses cluster; intervals have a heavy tail. Feeding raw measurements into a key derivation function gives you a weak key with a confident face. So the harness runs a conditioning step and then estimates min-entropy &#8212; the conservative version of "how many bits do we really have". You can watch the estimate climb as you type and stall when you stop, which is a better intuition pump than any diagram.</p>
+<p>The demo also shows the failure mode on purpose. Mash a key with a metronome, or let an automated script type, and the entropy estimate flattens. That is the lesson: the source is only as good as the unpredictability of the process behind it, and a human who is trying to be random is worse than a human who is not.</p>
+<h2>What it does not prove</h2>
+<p>It does not prove that a browser is a secure environment. JavaScript timing is coarse, a hostile page can pollute measurements, and no demo should be used to generate a key that protects something real. The demo is a teaching instrument: it makes visible a step that production systems hide.</p>
+<p>It is also not a medical device and does not diagnose anything. The word "biometric" makes people assume health, and I would rather say plainly that this measures intervals, not bodies. If a page ever claims to read your physiology from typing speed, close it.</p>
+<h2>Why publish a security demo at all</h2>
+<p>Because the alternative is a paragraph of assurance. A page that says "we use strong randomness" is unfalsifiable. A page that shows you the collection, the conditioning, and the entropy estimate can be argued with, and being arguable is the point. This is the same policy as the rest of the workshop: publish the receipt, not the adjective.</p>
+<p>The fiction's version of this idea is the seal &#8212; a guarantee that can be pointed at later. The <a href="/books/world.html">world page</a> explains seals and chains; this page is the same argument with numbers instead of dragons.</p>
+<p>If you want the general rule, read <a href="/blog/systems-that-break-early.html">Systems that break early</a>. If the vocabulary is thick, the <a href="/glossary.html">glossary</a> defines seal, hash, and dual ledger in one line each.</p>
+
+  </div>
+<div class="related"><h2>Keep reading</h2><ul class="read-list"><li><a href="/SovereignLatticeMesh.html">The Sovereign Lattice Mesh</a></li><li><a href="/HavenStarChart.html">The Star Chart</a></li><li><a href="/glossary.html">Glossary</a></li><li><a href="/lygo-hub.html">The systems hub</a></li></ul></div>
+  <div class="author"><div class="avatar" aria-hidden="true">JH</div><div><h3>Justin Helmer</h3><p>Writes the Eternal Haven saga and the essays on this domain, publishes music as Excavationpro, and keeps the lantern on at <a href="/start.html">/start.html</a>.</p></div></div>
+</article>
+<div class="workshop">
+<p><strong>More from the workshop:</strong>
+<a href="https://excavationpro.ca/">Excavationpro</a> &middot;
+<a href="https://asiancoastline.com/">Asian Coastline</a> &middot;
+<a href="https://bpmfinder.ca/">BPMfinder</a> &middot;
+<a href="https://justinhelmer.ca/">Justin Helmer</a> &middot;
+<a href="https://deepseekoracle.com/">DeepSeek Oracle</a> &middot;
+<a href="https://chatagent.ca/">Chatagent</a> &middot;
+<a href="https://bpmfinder.ca/tools.html">All tools</a></p>
+</div>
+<footer class="foot"><div class="foot-inner">
+  <nav><a href="/">Home</a> <a href="/start.html">Start here</a> <a href="/books/">Books</a> <a href="/blog/">Essays</a> <a href="/glossary.html">Glossary</a> <a href="/music.html">Music</a> <a href="/tools.html">Tools</a> <a href="/games/">Games</a> <a href="/contact.html">Contact</a> <a href="/privacy.html">Privacy</a> <a href="/terms.html">Terms</a> <a href="/editorial-standards.html">Standards</a></nav>
+  <p>&copy; <span class="y"></span> Justin Helmer / Eternal Haven. Original writing. Empty beats fake.</p>
+</div></footer>
+<script>document.querySelectorAll(".y").forEach(function(n){n.textContent=new Date().getFullYear()});</script>
+<script src="/assets/site-kit.js" defer></script>
+<div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Cookie consent">
+  <div>Ads may use cookies after you accept. <a href="/privacy.html">Privacy</a></div>
+  <div><button type="button" class="ok" id="cookieOk">Accept</button><button type="button" class="no" id="cookieNo">Decline</button></div>
+</div>
+</body>
+</html>

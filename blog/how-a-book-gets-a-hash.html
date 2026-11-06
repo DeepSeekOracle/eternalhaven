@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How a book gets a hash — Eternal Haven Essays</title>
+<meta name="description" content="Justin Helmer on hash-anchoring an ebook: what SHA-256 proves, what it does not, and why a small press should publish the number next to the file.">
+<meta name="author" content="Justin Helmer">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
+<link rel="canonical" href="https://eternalhaven.ca/blog/how-a-book-gets-a-hash.html">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/favicon.svg">
+<link rel="stylesheet" href="/blog/blog.css">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500&family=IBM+Plex+Mono:wght@400&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<meta name="google-adsense-account" content="ca-pub-0646320966060599">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0646320966060599" crossorigin="anonymous"></script>
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://eternalhaven.ca/blog/how-a-book-gets-a-hash.html">
+<meta property="og:title" content="How a book gets a hash">
+<meta property="og:description" content="Justin Helmer on hash-anchoring an ebook: what SHA-256 proves, what it does not, and why a small press should publish the number next to the file.">
+<meta property="og:site_name" content="Eternal Haven">
+<meta property="og:image" content="https://eternalhaven.ca/assets/og-home.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Eternal Haven — a library under a star vault">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@Excavationpro">
+<meta name="twitter:creator" content="@Excavationpro">
+<meta name="twitter:title" content="How a book gets a hash">
+<meta name="twitter:description" content="Justin Helmer on hash-anchoring an ebook: what SHA-256 proves, what it does not, and why a small press should publish the number next to the file.">
+<meta name="twitter:image" content="https://eternalhaven.ca/assets/og-home.jpg">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BlogPosting","headline":"How a book gets a hash","datePublished":"2026-11-06","author":{"@type":"Person","name":"Justin Helmer"},"url":"https://eternalhaven.ca/blog/how-a-book-gets-a-hash.html","about":{"@type":"Book","name":"The Unwritten Seal"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://eternalhaven.ca/"},{"@type":"ListItem","position":2,"name":"Essays","item":"https://eternalhaven.ca/blog/"},{"@type":"ListItem","position":3,"name":"How a book gets a hash"}]}]}</script>
+<style>
+.cookie-banner{position:fixed;left:12px;right:12px;bottom:16px;z-index:90;max-width:36rem;margin:0 auto;padding:.9rem 1rem;background:#121018;border:1px solid rgba(244,238,230,.16);border-radius:12px;color:#a89b8c;font:500 .88rem/1.45 system-ui,sans-serif;display:none;gap:.5rem;align-items:flex-start;justify-content:space-between;flex-wrap:wrap}
+.cookie-banner.show{display:flex}
+.cookie-banner a{color:#8ec8e8}
+.cookie-banner button{cursor:pointer;border-radius:8px;padding:.45rem .85rem;font-weight:600;border:1px solid rgba(244,238,230,.16);background:transparent;color:#f4eee6}
+.cookie-banner .ok{background:#d4b56a;color:#1a140c;border-color:#d4b56a}
+.workshop{max-width:70rem;margin:0 auto;padding:0 5vw 2rem;font-size:.84rem;line-height:1.8;color:#a89b8c}
+.workshop a{color:#a89b8c;text-decoration:none}
+.workshop a:hover{color:#d4b56a}
+</style>
+</head>
+<body class="essay-site">
+<header class="mast"><div class="mast-inner">
+  <a class="mark" href="/">Eternal Haven</a>
+  <nav><a href="/">Home</a> <a href="/start.html">Start</a> <a href="/books/">Books</a> <a href="/blog/" aria-current="page">Essays</a> <a href="/glossary.html">Glossary</a> <a href="/music.html">Music</a> <a href="/tools.html">Tools</a> <a href="/about.html">About</a></nav>
+</div></header>
+<article class="wrap">
+  <p class="crumb"><a href="/">Home</a> &#183; <a href="/blog/">Essays</a> &#183; How a book gets a hash</p>
+  <p class="kicker">Craft</p>
+  <h1>How a book gets a hash</h1>
+  <p class="lede">An ISBN names a book. A hash proves it is still the book. One is paperwork; the other is a receipt, and a small catalog needs both.</p>
+  <div class="byline"><div class="avatar" aria-hidden="true">JH</div><div><strong>Justin Helmer</strong><br>6 November 2026 &#183; about a nine-minute read</div></div>
+  <div class="prose">
+
+<p>When <em>The Unwritten Seal</em> went live as an ebook, I did two pieces of paperwork. The first was an ISBN, because a book needs a name a store can order. The second was a SHA-256, because a book needs a way to prove that the file you are holding is the file I wrote. The first one I filled in on a form. The second one I typed into a terminal at one in the morning, and it has done more for my peace of mind than the form did.</p>
+<p>This essay is the plain-language version of that second piece of paperwork, written for writers rather than engineers. If you already know what a hash is, skip to the section about what it cannot do. That section is the only one I would defend in an argument.</p>
+<h2>What a hash actually is</h2>
+<p>A hash is a fingerprint computed from the bytes of a file. Feed the file into a function and you get back a fixed-length string of letters and numbers. Change one character in the file and the string changes completely. You cannot work backwards from the string to the file, and no one has ever found a practical way to make two different files with the same string on purpose.</p>
+<p>That is it. That is the whole technology. It is not a blockchain, it is not a signature, and it does not prove authorship. A hash only proves one thing: the bytes you have now are the bytes that produced that number. If you also trust the source that published the number, you have something useful.</p>
+<h2>Why a small press should bother</h2>
+<p>Three reasons, in order of how much they matter.</p>
+<p>First, edition control. Every store re-packages an ebook. Some add tracking pages, some re-flow the CSS, some strip the cover. If I publish one number and the store's edition does not match it, that is information, not a scandal. It tells me the file has been through a packaging step, and I can decide whether that step changed anything that matters.</p>
+<p>Second, an end to a specific argument. Every writer eventually meets someone who claims a different edition is the original, or that a paragraph was removed, or that the book they have is the "real" one. With a published hash, that argument takes thirty seconds: compute, compare, done. Without it, the argument is about memory and vibes, and I lose either way.</p>
+<p>Third, it changes my own habit. Writing down a number forces me to freeze a file. A lot of small-press chaos comes from never deciding when a book is finished, then editing it in four places forever. A hash is a small ceremony: this is the text. Future edits get a new number and a note in the changelog.</p>
+<div class="ad-slot" aria-label="Advertisement">
+  <div class="ad-label">Advertisement</div>
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-0646320966060599" data-ad-format="auto" data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+<h2>What a hash cannot do</h2>
+<p>It cannot prove I wrote the book. Anyone can hash a file. The hash is a receipt for a copy, not a birth certificate for an idea.</p>
+<p>It cannot prove the text is unchanged across formats. An EPUB on one store and a PDF on another produce different bytes and different hashes for the same novel. If you want to compare the <em>reading experience</em>, you compare extracted text, not file bytes. The number protects the artifact, not the meaning.</p>
+<p>It cannot survive a re-typeset with a new line break and still match. This is the part that annoys people. A perfectly innocent process &#8212; a retailer's re-flow, a corrected typo, a new font &#8212; changes the hash and looks, to a suspicious reader, exactly like tampering. So the number has to come with a sentence: <em>this is the file I published on this date</em>, not <em>this is the only legitimate form of this book</em>.</p>
+<p>And it cannot be checked by a reader who does not know how to compute it. That is a real barrier, and pretending otherwise is how honest technical writing turns into a smug little club. Which is why the next section exists.</p>
+<h2>How a normal person checks it</h2>
+<p>On Windows, open PowerShell in the folder that holds the file and run <code>Get-FileHash .\book.epub -Algorithm SHA256</code>. On a Mac or Linux machine, <code>shasum -a 256 book.epub</code>. Both print a long string. Compare it, character by character, to the number published with the listing.</p>
+<p>It is not fun. It takes ten seconds. You will almost always find that the numbers match, and that is the point: a small, boring ceremony that makes a quiet guarantee real. The alternative is trusting a file because it has the right name, which is how people end up quoting a book that no longer exists.</p>
+<h2>The wider habit</h2>
+<p>I have started doing this for audio and for images too, because the same problem appears everywhere. A WAV gets re-encoded by every platform and the "same" track is suddenly three different waveforms. A cover image gets resized until the type is mush. A hash does not stop any of that. It just ends the argument about <em>what changed</em>, which is the only argument worth having.</p>
+<p>If you write, publish one number per book. If you publish music, publish one per master. Put it somewhere that does not move: a page on your own domain, next to the download, with the date. Then never change it quietly. The number is the cheapest form of integrity available to a person with no legal department, and it costs nothing but attention.</p>
+<p>The practical version for this house is in <a href="/books/the-unwritten-seal.html">The Unwritten Seal</a>, where the ISBN and the file live together. The philosophy is <a href="/blog/empty-beats-fake.html">Empty beats fake</a>: name what you actually have.</p>
+
+  </div>
+<div class="related"><h2>Keep reading</h2><ul class="read-list"><li><a href="/books/the-unwritten-seal.html">Book V — The Unwritten Seal</a></li><li><a href="/blog/empty-beats-fake.html">Empty beats fake</a></li><li><a href="/glossary.html">Glossary: hash, Merkle root, seal</a></li><li><a href="/blog/">All essays</a></li></ul></div>
+  <div class="author"><div class="avatar" aria-hidden="true">JH</div><div><h3>Justin Helmer</h3><p>Writes the Eternal Haven saga and the essays on this domain, publishes music as Excavationpro, and keeps the lantern on at <a href="/start.html">/start.html</a>.</p></div></div>
+</article>
+<div class="workshop">
+<p><strong>More from the workshop:</strong>
+<a href="https://excavationpro.ca/">Excavationpro</a> &middot;
+<a href="https://asiancoastline.com/">Asian Coastline</a> &middot;
+<a href="https://bpmfinder.ca/">BPMfinder</a> &middot;
+<a href="https://justinhelmer.ca/">Justin Helmer</a> &middot;
+<a href="https://deepseekoracle.com/">DeepSeek Oracle</a> &middot;
+<a href="https://chatagent.ca/">Chatagent</a> &middot;
+<a href="https://bpmfinder.ca/tools.html">All tools</a></p>
+</div>
+<footer class="foot"><div class="foot-inner">
+  <nav><a href="/">Home</a> <a href="/start.html">Start here</a> <a href="/books/">Books</a> <a href="/blog/">Essays</a> <a href="/glossary.html">Glossary</a> <a href="/music.html">Music</a> <a href="/tools.html">Tools</a> <a href="/games/">Games</a> <a href="/contact.html">Contact</a> <a href="/privacy.html">Privacy</a> <a href="/terms.html">Terms</a> <a href="/editorial-standards.html">Standards</a></nav>
+  <p>&copy; <span class="y"></span> Justin Helmer / Eternal Haven. Original writing. Empty beats fake.</p>
+</div></footer>
+<script>document.querySelectorAll(".y").forEach(function(n){n.textContent=new Date().getFullYear()});</script>
+<script src="/assets/site-kit.js" defer></script>
+<div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Cookie consent">
+  <div>Ads may use cookies after you accept. <a href="/privacy.html">Privacy</a></div>
+  <div><button type="button" class="ok" id="cookieOk">Accept</button><button type="button" class="no" id="cookieNo">Decline</button></div>
+</div>
+</body>
+</html>
