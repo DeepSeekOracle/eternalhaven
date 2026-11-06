@@ -3,7 +3,7 @@
 /* keep the fixed cookie notice from covering the last line of the footer */
 body:has(.cookie-banner.show) { padding-bottom: 6rem; }
 @media (max-width: 820px) {
-  body:has(.cookie-banner.show) { padding-bottom: 12rem; }
+  body:has(.cookie-banner.show) { padding-bottom: 7.5rem; }
 }
 
 .workshop-nav {
