@@ -1,5 +1,17 @@
 # CHANGES — eternalhaven.ca
 
+## 2026-11-06 (latest) — all manual ad units removed
+
+AdSense Auto ads places the units, so every hand-placed `<ins class="adsbygoogle">` block is gone
+from the site: the wrappers, the labels, the `push({})` calls, and the generator's ad constant
+(`_build_pages.py` now emits `AD = ""`).
+
+- 11 hand-written pages rewritten; 20 generated pages regenerated without units.
+- **Zero** `ins.adsbygoogle` in the shipped HTML. The AdSense script and
+  `google-adsense-account` meta tag stay on all 61 pages, because that is what Auto ads needs.
+- The only `class="ad-slot"` left in the source is the LYGO TV player container on the homepage
+  (`ad-slot lygo-tv-wrap`), which is the video, not an ad.
+
 ## 2026-11-06 (corrected) — the player belongs on the page; it was misplaced, not wrong
 
 **Correction to the entry below.** The video player was never the cause of anything.

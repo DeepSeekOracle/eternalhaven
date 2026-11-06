@@ -31,11 +31,9 @@ NAV = [
     ("/about.html", "About", "about"),
 ]
 
-AD = """<div class="ad-slot" aria-label="Advertisement">
-  <div class="ad-label">Advertisement</div>
-  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-0646320966060599" data-ad-format="auto" data-full-width-responsive="true"></ins>
-  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>"""
+# No manual ad units. AdSense Auto ads places them; a hand-placed unit inside the
+# article is what we are removing. The head script and meta tag stay for verification.
+AD = ""
 
 TEMPLATE = Template("""<!DOCTYPE html>
 <html lang="en">

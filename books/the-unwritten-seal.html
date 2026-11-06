@@ -60,11 +60,7 @@
 <h2>Why a hash</h2>
 <p>I planted a content hash for the file when the ebook went live. You do not need the hash to read. You need it on the day someone claims a different file is the original.</p>
 <p>This is not paranoia about pirates. Pirates were never the threat to a small catalog. The threat is edits: a retailer re-flow, a "corrected" edition, a file with my name on it and a paragraph I did not write. A hash is a small, cheap answer. It says: this text has one identity, and here is the number. I wrote about the practice at length in <a href="/blog/how-a-book-gets-a-hash.html">How a book gets a hash</a>.</p>
-<div class="ad-slot" aria-label="Advertisement">
-  <div class="ad-label">Advertisement</div>
-  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-0646320966060599" data-ad-format="auto" data-full-width-responsive="true"></ins>
-  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>
+
 <h2>How to check a copy</h2>
 <p>Take the file you have. Compute a SHA-256 of it. Compare against the value published with the listing. If they differ, you have a different file &#8212; possibly a newer one with a fixed typo, possibly something worse. Neither possibility should be a mystery. That is the whole point of publishing the number.</p>
 <p>Practical note: file bytes can change without the text changing, because every store re-packages an ebook. If a store's copy fails the hash but the chapter text matches, that is a packaging difference, not a fraud. The hash protects the text, not the zip. I would rather explain that limitation than pretend the number is stronger than it is.</p>
