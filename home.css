@@ -8,7 +8,8 @@ body.home { margin:0; background:var(--bg); color:var(--fg); font-family:Syne,sy
 .home .brand { color:var(--fg); text-decoration:none; font-weight:800; letter-spacing:.14em; }
 .home nav a { color:var(--fg); text-decoration:none; opacity:.82; margin-left:.8rem; }
 .home nav a[aria-current="page"], .home nav a:hover { color:var(--gold); opacity:1; }
-.hero { min-height:100svh; display:grid; place-items:end stretch; background:url("/assets/hero.jpg") center/cover no-repeat; position:relative; }
+/* not the whole viewport: the opening of the essay should be visible on the first screen */
+.hero { min-height:86svh; display:grid; place-items:end stretch; background:url("/assets/hero.jpg") center/cover no-repeat; position:relative; }
 .hero::after { content:""; position:absolute; inset:0; background:linear-gradient(180deg, rgba(9,8,10,.18) 0%, rgba(9,8,10,.28) 45%, rgba(9,8,10,.94) 100%); }
 .hero-inner { position:relative; z-index:1; padding:0 6vw 8vh; max-width:48rem; }
 .kicker { font-family:"IBM Plex Mono",ui-monospace,monospace; letter-spacing:.26em; font-size:.7rem; color:var(--gold); text-transform:uppercase; }
