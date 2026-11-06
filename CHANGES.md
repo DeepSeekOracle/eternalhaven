@@ -1,5 +1,19 @@
 # CHANGES — eternalhaven.ca
 
+## 2026-11-06 (corrected) — the player belongs on the page; it was misplaced, not wrong
+
+**Correction to the entry below.** The video player was never the cause of anything.
+`excavationpro.ca` passes AdSense *with* a player: measured on the live site it is
+`main.sheet > .ad-slot.lygo-tv-wrap > .lygo-tv-ninja`, **960 px wide, 1,109 px tall, starting at
+y = 1,835** — i.e. after the hero and after the opening essay, inside the content column.
+
+What was wrong here was placement and width, not presence: the widget sat **full-bleed directly
+under the hero, before a single paragraph**, at the top of the page.
+
+Now it matches the reference: after the first three paragraphs of the opening essay, inside the
+content column, 960 px wide, starting at **y ≈ 1,347** — 488 px higher up the page than the site
+that passed.
+
 ## 2026-11-06 (later still) — home page was hero + one paragraph + a video
 
 The word count was there (923 prose words) but a reviewer never reached it: a full-viewport
